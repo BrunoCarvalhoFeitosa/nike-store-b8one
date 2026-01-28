@@ -79,9 +79,3 @@
     left: 60px;
   }
 }
-
-@media (min-width: 1280px) {
-  .triple-banner-wrapper {
-    overflow-x: hidden;
-  }
-}
