@@ -1,0 +1,81 @@
+.filter-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100dvh;
+  background: #fff;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease;
+  overflow-y: auto;
+}
+
+.filter-active {
+  visibility: visible;
+  opacity: 1;
+  padding: 16px 12px;
+}
+
+.filter-header {
+  margin-bottom: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+}
+
+.filter-title h3 {
+  font-family: var(--font-bungee);
+  font-size: 18px;
+}
+
+.filter-controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.filter-delete {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filter-delete button {
+  padding: 4px 12px;
+  font-size: 16px;
+  background: var(--black);
+  color: var(--white);
+}
+
+@media (min-width: 1280px) {
+  .filter-wrapper {
+    position: sticky;
+    top: 0;
+    width: 0;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease;
+    z-index: 0;
+  }
+
+  .filter-active {
+    margin-right: 40px;
+    width: 400px;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (min-width: 1920px) {
+  .filter-active {
+    width: 450px;
+  }
+}

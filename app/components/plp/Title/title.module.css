@@ -1,0 +1,13 @@
+.title {
+  margin: 0 0 10px;
+  font-family: var(--font-bungee);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+@media (min-width: 321px) {
+  .title {
+    font-size: 28px;
+  }
+}

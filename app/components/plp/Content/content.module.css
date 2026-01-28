@@ -1,0 +1,12 @@
+.content-wrapper {
+  padding: 0 0 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .content-wrapper {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,30 @@
+.filter-wrapper {
+  flex: 1;
+  width: 100%;
+}
+
+.filter-button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  width: 100%;
+  height: 46px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .filter-wrapper {
+    flex: none;
+    width: auto;
+  }
+
+  .filter-button {
+    width: 180px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,31 @@
+.breadcrumb-wrapper {
+  width: 100%;
+}
+
+.breadcrumb-nav {
+  width: 100%;
+}
+
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+}
+
+.breadcrumb-list-item {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: var(--gray);
+}
+
+.breadcrumb-list-item:first-of-type {
+  font-weight: 600;
+  color: var(--black);
+  color: var(--black);
+}
+
+.breadcrumb-separator {
+  margin-right: 6px;
+  color: var(--black);
+}

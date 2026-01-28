@@ -1,0 +1,24 @@
+.filter-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter-checkbox-input {
+  all: unset;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #DDD;
+}
+
+.filter-checkbox-input:checked {
+  background: var(--black);
+}
+
+.filter-checkbox-text {
+  font-size: 22px;
+  font-weight: 600;
+}

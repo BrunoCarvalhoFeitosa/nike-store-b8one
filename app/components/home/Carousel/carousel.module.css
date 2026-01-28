@@ -1,0 +1,135 @@
+.carousel-wrapper {
+  width: 100%;
+  height: calc(100dvh - 300px);
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-figure {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.carousel-figure:hover img {
+  transform: scale(1.05);
+}
+
+.carousel-caption {
+  position: absolute;
+  left: 50%;
+  bottom: 120px;
+  transform: translateX(-50%);
+  text-align: center;
+  max-width: 100%;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.carousel-article-title {
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  margin: 0;
+}
+
+.carousel-article-paragraph {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.carousel-article-button {
+  padding: 15px 30px;
+  border-radius: 38px;
+  background: var(--white);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--black);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carousel-article-button:hover {
+  background: #f2f2f2;
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 110px;
+  bottom: 25px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 15px;
+  color: var(--white);
+  z-index: 10;
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--white);
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .carousel-caption {
+    bottom: 150px;
+    width: 90%;
+  }
+
+  .carousel-article-title {
+    font-size: 24px;
+  }
+
+  .carousel-article-paragraph {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-article-title {
+    font-size: 50px;
+  }
+
+  .carousel-caption {
+    bottom: 150px;
+    width: 90%;
+  }
+}
+
+@media (min-width: 1480px) {
+  .carousel-wrapper {
+    height: calc(100dvh - 200px);
+  }
+}

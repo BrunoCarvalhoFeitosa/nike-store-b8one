@@ -1,13 +1,34 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "Bungee";
+  src: url("/fonts/bungee-regular.ttf");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --white: #EEE;
+  --white-foreground: #E5E5E5;
+  --black: #171717;
+  --gray: #B4B4B4;
+  --gray-foreground: #888;
+  --gray-light: #CCC;
+  --black-foreground: #000;
+  --font-bungee: "Bungee", sans-serif;
+}
+
+::selection {
+  background: var(--black);
+  color: var(--white);
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--black);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--white-foreground);
 }
 
 html,
@@ -17,8 +38,8 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  background: var(--white);
+  color: var(--black);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -30,13 +51,136 @@ body {
   margin: 0;
 }
 
+main {
+  margin-top: 85px;
+  width: 100%;
+  padding: 20px 15px;
+  overflow: hidden;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+button {
+  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  bottom: 25px;
+  right: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: var(--white);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.swiper-button-next {
+  position: absolute;
+  bottom: 25px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: var(--white);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.swiper-button-prev svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  transform: rotate(-180deg);
+}
+
+.swiper-button-next svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 5;
+  z-index: 10;
+}
+
+.swiper-pagination > .swiper-pagination-bullet {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--white);
+  opacity: .2;
+  cursor: pointer;
+}
+
+.swiper-pagination > .swiper-pagination-bullet-active {
+  width: 16px;
+  height: 16px;
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .swiper-pagination {
+    bottom: 90px;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    margin-top: 90px;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    margin-top: 120px;
+    padding: 20px 40px;
   }
 }

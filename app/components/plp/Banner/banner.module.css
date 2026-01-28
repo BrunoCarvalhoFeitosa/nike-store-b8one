@@ -1,0 +1,38 @@
+.banner-wrapper {
+  margin-bottom: 28px;
+  width: 100%;
+}
+
+.banner-image {
+  width: 100%;
+}
+
+.banner-desktop {
+  display: none;
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .banner-image {
+    height: 190px;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner-image {
+    height: 350px;
+  }
+
+  .banner-desktop {
+    display: block;
+  }
+
+  .banner-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner-image {
+    height: auto;
+  }
+}
