@@ -79,3 +79,9 @@
     left: 60px;
   }
 }
+
+@media (min-width: 1920px) {
+  .triple-banner-image {
+    width: 100%;
+  }
+}
