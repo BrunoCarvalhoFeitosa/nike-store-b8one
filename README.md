@@ -1,36 +1,139 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<!-- PROJECT LOGO -->
+<p align="center">
+  <a href="https://www.b8one.com">
+    <img src="https://media.licdn.com/dms/image/v2/C560BAQGMrZFt-zCiDw/company-logo_200_200/company-logo_200_200/0/1656602128974/b8one_logo?e=2147483647&v=beta&t=1JWsfi7HD1HhmmdxeZKsPGgp-kZUX6DJjmIKc_CZ0Ew" alt="Logo" width="150" weight="150" />
+  </a>
+  <p align="center">
+    Aplicação desenvolvida como parte de um desafio técnico de Front-end, utilizando Next.js e tecnologias modernas do ecossistema React para simular uma vitrine de produtos com filtros, ordenação, lazy loading e persistência de estado.
+  </p>
+</p>
 
-## Getting Started
+---
 
-First, run the development server:
+## 🇧🇷 Português
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Sumário</summary>
+  <ol>
+    <li>
+      <a href="#sobre-o-projeto">Sobre o projeto</a>
+      <ul>
+        <li><a href="#feito-com">Feito com</a></li>
+        <li><a href="#hospedagem">Hospedagem</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#iniciando-o-projeto">Iniciando o projeto</a>
+      <ul>
+        <li><a href="#pré-requisitos">Pré-requisitos</a></li>
+        <li><a href="#instalação">Instalação</a></li>
+      </ul>
+    </li>
+    <li><a href="#license">Licenças</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ol>
+</details>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<!-- ABOUT THE PROJECT -->
+## Sobre o projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Esta aplicação foi desenvolvida como parte de um **desafio técnico de Front-end**, com foco em organização de código, boas práticas, responsividade e experiência do usuário.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+A aplicação é composta por duas páginas principais:
 
-## Learn More
+- Header/Menu global
+- Página Home
+- Página de Ofertas (`/ofertas`)
 
-To learn more about Next.js, take a look at the following resources:
+### Home
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+https://github.com/user-attachments/assets/1bee818a-7009-443c-bde9-fca652bf38d0
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Página inicial totalmente responsiva, composta por:
 
-## Deploy on Vercel
+- Carrossel de imagens desenvolvido com **Swiper**
+- Seção de banners duplos
+- Seção de banners triplos
+- Todos os banners direcionam para a página **/ofertas**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Ofertas (`/ofertas`)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+https://github.com/user-attachments/assets/4cc46b8b-be2b-4547-b6ec-67c3e36b46d0
+
+Página principal da vitrine de produtos, contendo:
+
+- Banner estático no topo
+- Título **"Ofertas da Semana"**
+- Breadcrumb de navegação
+- Dropdown para ordenação dos produtos por:
+  - Lançamentos (mais recentes)
+  - Maior preço
+  - Menor preço
+- Filtros por:
+  - Cor
+  - Gênero
+  - Tecido
+  - Tamanho
+  - Categoria
+- Vitrine de produtos com:
+  - Lazy loading
+  - Imagem principal
+  - Imagens descritivas (thumbnails) com interação
+  - Nome do produto
+  - Categoria
+  - Preço original
+  - Preço com desconto
+  - Percentual de desconto
+
+Os filtros e a ordenação são gerenciados globalmente com **Zustand** e persistidos no **Local Storage**, garantindo que as configurações da vitrine sejam mantidas mesmo após o recarregamento da página.
+
+### Feito com
+
+* [Next.js](https://nextjs.org)
+* [TypeScript](https://www.typescriptlang.org)
+* [Zustand](https://zustand-demo.pmnd.rs)
+* [CSS Modules](https://github.com/css-modules/css-modules)
+* [Swiper](https://swiperjs.com)
+* [Vercel](https://vercel.com)
+
+### Hospedagem
+
+A aplicação está em produção neste link: **(https://bruno-carvalho-feitosa-nike-store-b8one.vercel.app)**.
+
+## Iniciando o projeto
+
+Primeiramente será necessário clonar este projeto em **(https://github.com/BrunoCarvalhoFeitosa/nike-store-b8one.git)**, após o download será necessário abrir este projeto no seu editor e no terminal digitar npm install, posteriormente é só rodar em seu terminal o comando npm run dev, após isso, acesse em seu navegador a url (http://localhost:3000).
+
+### Pré-requisitos
+
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Instalação
+
+1. Clone o repositório
+   ```sh
+   git clone https://github.com/BrunoCarvalhoFeitosa/nike-store-b8one.git
+   ```
+2. Instale os pacotes do NPM
+   ```sh
+   npm install
+   ```
+   
+3. Inicie o projeto
+   ```sh
+   npm run dev
+   ```   
+
+<!-- LICENSE -->
+## License
+
+Distribuído sob a licença MIT.
+
+<!-- CONTACT -->
+## Contato
+
+Bruno Carvalho Feitosa - [GitHub](https://github.com/BrunoCarvalhoFeitosa) - [LinkedIn](https://www.linkedin.com/in/bruno-carvalho-feitosa/)
